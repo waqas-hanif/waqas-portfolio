@@ -21,6 +21,7 @@ const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
+  // Rotating roles
   useEffect(() => {
     const interval = setInterval(() => {
       setRoleIndex((prev) => (prev + 1) % roles.length);
@@ -29,6 +30,7 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Mouse movement interaction
   useEffect(() => {
     let frame;
 
@@ -116,12 +118,10 @@ const Hero = () => {
         <div
           className="relative z-20"
           style={{
-            transform: `translate3d(${mouse.x * 3}px, ${
-              mouse.y * 3
-            }px, 0)`,
+            transform: `translate3d(${mouse.x * 3}px, ${mouse.y * 3}px, 0)`,
           }}
         >
-          {/* Available */}
+          {/* Availability */}
 
           <div className="mb-7 flex flex-wrap items-center gap-3">
             <div className="inline-flex items-center gap-3 rounded-full border border-cyan-400/20 bg-cyan-400/[0.045] px-4 py-2.5 shadow-[0_0_30px_rgba(34,211,238,0.04)] backdrop-blur-xl">
@@ -132,7 +132,7 @@ const Hero = () => {
               </span>
 
               <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-cyan-300">
-                Available for Projects
+                Open to Opportunities
               </span>
             </div>
 
@@ -164,7 +164,7 @@ const Hero = () => {
           <div className="mt-9 min-h-[5rem]">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
               <span className="text-lg font-medium text-slate-500 sm:text-xl">
-                I build as a
+                I work as a
               </span>
 
               <span
@@ -185,13 +185,12 @@ const Hero = () => {
           {/* Description */}
 
           <p className="mt-4 max-w-2xl text-[15px] leading-8 text-slate-400 sm:text-base lg:text-[17px]">
-            I create modern, scalable and high-performance web applications
-            with the{" "}
+            I build modern, responsive and scalable web applications using the{" "}
             <span className="font-semibold text-slate-200">
               MERN stack
             </span>
-            , combining clean React interfaces with robust Node.js,
-            Express.js and MongoDB backends.
+            , with a focus on clean React interfaces, reliable APIs and
+            maintainable backend systems.
           </p>
 
           {/* Technologies */}
@@ -251,7 +250,7 @@ const Hero = () => {
             <SocialLinks />
           </div>
 
-          {/* Stats */}
+          {/* Skills */}
 
           <div className="mt-9 flex flex-wrap gap-0 border-t border-white/[0.08] pt-7">
             <div className="pr-7 sm:pr-10">
@@ -332,9 +331,9 @@ const Hero = () => {
 
             <span className="particle-delay absolute right-[7%] top-[35%] h-1 w-1 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,1)]" />
 
-            <span className="particle-slow absolute left-[19%] bottom-[17%] h-1 w-1 rounded-full bg-purple-400 shadow-[0_0_12px_rgba(168,85,247,1)]" />
+            <span className="particle-slow absolute bottom-[17%] left-[19%] h-1 w-1 rounded-full bg-purple-400 shadow-[0_0_12px_rgba(168,85,247,1)]" />
 
-            <span className="particle absolute right-[17%] bottom-[24%] h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,1)]" />
+            <span className="particle absolute bottom-[24%] right-[17%] h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,1)]" />
 
             <span className="particle-delay absolute left-[4%] top-[55%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
 
@@ -382,7 +381,7 @@ const Hero = () => {
 
                   <img
                     src="/profile.jpg"
-                    alt="Waqas Hanif"
+                    alt="Waqas Hanif - Full Stack MERN Developer"
                     className="absolute left-1/2 top-1/2 h-[100%] w-[100%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-[center_38%] animate-[profileFloat_6s_ease-in-out_infinite]"
                   />
 
@@ -440,7 +439,7 @@ const Hero = () => {
                           <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
 
                           <p className="text-[11px] text-slate-500">
-                            Full Stack Web Developer
+                            Full Stack MERN Developer
                           </p>
 
                         </div>
@@ -510,7 +509,7 @@ const Hero = () => {
                   </p>
 
                   <p className="mt-0.5 text-[10px] font-semibold text-slate-300">
-                    Building & Learning
+                    Building & Developing
                   </p>
 
                 </div>
@@ -527,7 +526,11 @@ const Hero = () => {
               </p>
 
               <p className="mt-1 text-[11px] font-semibold leading-5 text-slate-300">
-                University of Management and Technology
+                BS Information Technology
+              </p>
+
+              <p className="mt-0.5 text-[10px] text-slate-500">
+                Ghazi University, Dera Ghazi Khan
               </p>
 
             </div>
